@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Threads - Fashion Forward</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background for a subtle, clean look */
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Vibrant gradient */
+        }
+        .product-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .btn-primary {
+            background-color: #ff69b4; /* Hot pink for primary buttons */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ff47a3; /* Darker pink on hover */
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #ff69b4;
+            color: #ff69b4;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .section-title {
+            font-weight: 800;
+            color: #333;
+        }
+        .newsletter-section {
+            background-color: #e9ecef; /* Light background for contrast */
+        }
+        .footer {
+            background-color: #343a40; /* Dark footer */
+            color: #f8f9fa;
+        }
+        .footer a:hover {
+            color: #ff69b4; /* Pink hover for footer links */
+        }
+        /* Adding subtle animation to the hero text */
+        .hero-text-animate {
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .product-image-placeholder {
+            background-color: #e2e8f0; /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-pink-500">Chic<span class="text-purple-600">Threads</span></a>
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors">Home</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-500 transition-colors">Shop</a>
+                <a href="#categories" class="text-gray-700 hover:text-pink-500 transition-colors">Categories</a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors">About</a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors">Contact</a>
+            </nav>
+            <div class="space-x-4">
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors"><i class="fas fa-search"></i></a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors"><i class="fas fa-shopping-cart"></i> <span class="bg-pink-500 text-white text-xs font-bold rounded-full px-1.5 py-0.5">3</span></a>
+                <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center hero-text-animate">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Discover Your Next Style</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Explore our curated collection of the latest trends and timeless classics.
+                Elevate your wardrobe with ChicThreads.
+            </p>
+            <a href="#products" class="btn-primary font-semibold py-3 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">Shop Now</a>
+            <a href="#" class="btn-secondary font-semibold py-3 px-8 rounded-lg text-lg ml-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">Learn More</a>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300/FFC0CB/333333?text=Stylish+Dress" alt="Product Image" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/94a3b8?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Elegant Evening Gown</h3>
+                        <p class="text-gray-600 text-sm mb-3">Perfect for special occasions.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-pink-500">$129.99</span>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full btn-primary py-2 px-4 rounded-lg font-medium">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300/ADD8E6/333333?text=Casual+Sneakers" alt="Product Image" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/94a3b8?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Urban Comfort Sneakers</h3>
+                        <p class="text-gray-600 text-sm mb-3">Style meets comfort for daily wear.</p>
+                         <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-pink-500">$79.50</span>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full btn-primary py-2 px-4 rounded-lg font-medium">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300/90EE90/333333?text=Chic+Handbag" alt="Product Image" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/94a3b8?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Designer Leather Handbag</h3>
+                        <p class="text-gray-600 text-sm mb-3">A statement piece for any outfit.</p>
+                         <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-pink-500">$199.00</span>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full btn-primary py-2 px-4 rounded-lg font-medium">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300/FEDCBA/333333?text=Modern+Watch" alt="Product Image" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/94a3b8?text=Image+Not+Found';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Minimalist Wrist Watch</h3>
+                        <p class="text-gray-600 text-sm mb-3">Timeless design, modern appeal.</p>
+                         <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-pink-500">$250.00</span>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="w-full btn-primary py-2 px-4 rounded-lg font-medium">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="py-16 md:py-24 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="category-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-female text-5xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">Women's Fashion</h3>
+                </div>
+                <div class="category-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-male text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">Men's Fashion</h3>
+                </div>
+                <div class="category-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-gem text-5xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">Jewelry & Accessories</h3>
+                </div>
+                <div class="category-card bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-shoe-prints text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">Shoes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-purple-600 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Mid-Season Sale!</h2>
+            <p class="text-lg md:text-xl mb-8">Get up to <span class="text-yellow-300 font-bold">50% OFF</span> on selected items. Don't miss out!</p>
+            <a href="#" class="btn-primary bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-10 rounded-lg text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">Shop Sale</a>
+        </div>
+    </section>
+
+    <section class="newsletter-section py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="section-title text-3xl md:text-4xl mb-4">Stay Updated!</h2>
+                <p class="text-gray-600 mb-8">Subscribe to our newsletter for the latest arrivals, exclusive offers, and style tips.</p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email address" class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none" required>
+                    <button type="submit" class="btn-primary py-3 px-6 rounded-lg font-semibold">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ChicThreads</h3>
+                    <p class="text-gray-400">Your destination for the latest fashion trends and timeless styles.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">Contact Us</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-pink-400">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">Track Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/alphacodes101?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/alphacodes101/" class="text-gray-400 hover:text-pink-400 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 ChicThreads. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
