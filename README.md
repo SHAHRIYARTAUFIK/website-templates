@@ -1,7 +1,7 @@
-E-commerce Website Templates
+**E-commerce Website Templates**
 A collection of modern, responsive, and easy-to-use templates for building e-commerce websites. This repository provides a variety of layouts and components designed to jumpstart your online store development.
 
-Features:
+**Features:**
 
 Responsive Design: Templates adapt seamlessly to various screen sizes (desktop, tablet, mobile).
 
